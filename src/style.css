@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  margin: 0;
+}
+
+.select {
+  margin-left: 200px;
+}
+
+.items {
+  margin: 0 0 25px 0;
+}
+
+.items__title {
+  margin: 0 0 20px 0;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item__image {
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.item__name {
+  margin: 0 0 10px 0;
+}
+
+.item__price {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+}
+
+.total__title {
+  margin: 0;
+}
+
+.total__price {
+  margin: 0 0 0 15px;
+  font-size: 1.5rem;
+}
+
+.loader,
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.loader.visible {
+  display: flex;
+}
+
+.loader__container {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.6);
+}
+
+.loader__item {
+  position: absolute;
+  background-color: gray;
+  height: 9px;
+  width: 9px;
+  border-radius: 5px;
+  animation-name: fade;
+  animation-duration: 0.48s;
+  animation-iteration-count: infinite;
+  animation-direction: linear;
+}
+
+.loader__item:nth-child(1) {
+  left: 0;
+  top: 20px;
+  animation-delay: 0.18s;
+}
+
+.loader__item:nth-child(2) {
+  left: 6px;
+  top: 6px;
+  animation-delay: 0.24s;
+}
+
+.loader__item:nth-child(3) {
+  left: 20px;
+  top: 0;
+  animation-delay: 0.3s;
+}
+
+.loader__item:nth-child(4) {
+  right: 6px;
+  top: 6px;
+  animation-delay: 0.36s;
+}
+
+.loader__item:nth-child(5) {
+  right: 0;
+  top: 20px;
+  animation-delay: 0.42s;
+}
+
+.loader__item:nth-child(6) {
+  right: 6px;
+  bottom: 6px;
+  animation-delay: 0.48s;
+}
+
+.loader__item:nth-child(7) {
+  left: 20px;
+  bottom: 0;
+  animation-delay: 0.54s;
+}
+
+.loader__item:nth-child(8) {
+  left: 6px;
+  bottom: 6px;
+  animation-delay: 0.6s;
+}
+
+.error {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+}
+
+.error.visible {
+  display: flex;
+}
+
+.error__major {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.error__minor {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@keyframes fade {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: gray;
+  }
+}

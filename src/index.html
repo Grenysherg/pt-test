@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="container" class="container" data-loading-class="loading">
+      <header class="header">
+        <h1 class="title">Cart</h1>
+
+        <label class="select">
+          <select id="select"></select>
+        </label>
+        
+      </header>
+
+      <section id="items" class="items">
+        <h2 class="items__title">Items</h2>
+      </section>
+
+      <section class="total">
+        <h2 class="total__title">Total:</h2>
+
+        <p id="total-price" class="total__price"></p>
+      </section>
+    </div>
+
+    <div id="loader" class="loader visible">
+      <div class="loader__container">
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+      </div>
+    </div>
+
+    <div id="error" class="error">
+      <p class="error__major">Server error</p>
+      <p class="error__minor">Please try later</p>
+    </div>
+
+    <template id="item-template">
+      <article class="item">
+        <div class="item__image"></div>
+
+        <div>
+          <h3 class="item__name"></h3>
+
+          <p class="item__price"></p>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>
