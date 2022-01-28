@@ -52,7 +52,6 @@ var cart_item_1 = __webpack_require__(49);
 var currency_1 = __webpack_require__(859);
 var Cart = /** @class */ (function () {
     function Cart(items, currencies, initialCurrency) {
-        this.items = [];
         this.currency = new currency_1.Currency(currencies, initialCurrency);
         this.currency.setRatesCallback(this.setPrices.bind(this));
         this.currency.setChangeCallback(this.changeCurrency.bind(this));
@@ -63,6 +62,7 @@ var Cart = /** @class */ (function () {
         var _this = this;
         var listElement = document.getElementById('items');
         var fragment = new DocumentFragment();
+        this.items = [];
         items.forEach(function (item) {
             var newItem = new cart_item_1.CartItem(item, _this.currency.getCurrentSymbol());
             _this.items.push(newItem);
